@@ -1,0 +1,7 @@
+#titulo{ 
+    display: flex;
+    justify-content: center;
+}
+#cabecera{
+    background: rgb(82, 119, 119);
+}
