@@ -9,12 +9,14 @@ import CONFIG from './config/config';
 import Error from './Error';
 import { mockdata } from './constants/products';
 
+
+
 function App() {
 
   const [isLoading, setLoading] = useState(true)
   const [productos, setProductos] = useState(null)
   const url = CONFIG.server_url;
-  const aux = true;
+  var aux = true;
   const USE_SERVER = CONFIG.use_server;
 
   const callServer = async (param) => {
@@ -44,7 +46,7 @@ function App() {
     else{
       setProductos(mockdata);
     }
-    setLoading= false;
+    setLoading(false);
   }
 
 
@@ -53,6 +55,7 @@ function App() {
       <Header />
       {(isLoading) && <SpinnerCarga />} {/* Carga SpinnerCarga mientras is loading sea true */}
       {(!isLoading) && <SearchPage theproducts={productos} />}
+      {!aux && <Error error={productos}/>}
     </div>
   );
 }
