@@ -44,6 +44,7 @@ function App() {
     else{
       setProductos(mockdata);
     }
+    setLoading= false;
   }
 
 
