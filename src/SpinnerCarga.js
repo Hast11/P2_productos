@@ -1,6 +1,8 @@
 import Spinner from 'react-bootstrap/Spinner';
 import './SpinnerCarga.css'
 
+const spinnerWrapperEl = document.querySelector('.Spinner');
+
 function SpinnerCarga() {
   return (
     <div className='Spinner'>
