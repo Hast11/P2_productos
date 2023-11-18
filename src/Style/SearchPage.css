@@ -1,0 +1,14 @@
+#buscadorFiltro{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    width: 300px;
+}
+
+#filtro{
+    width: 250px;
+    margin: 10px;
+}
