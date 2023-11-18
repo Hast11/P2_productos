@@ -1,4 +1,4 @@
-import './Header.css'
+import './Style/Header.css'
 export default function Header (props){
     return( //Todos los components tienen que tener un return que devuelva un elemento unico
         <div id="cabecera">

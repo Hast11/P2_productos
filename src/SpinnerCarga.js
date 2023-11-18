@@ -1,5 +1,5 @@
 import Spinner from 'react-bootstrap/Spinner';
-import './SpinnerCarga.css'
+import './Style/SpinnerCarga.css'
 
 const spinnerWrapperEl = document.querySelector('.Spinner');
 

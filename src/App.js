@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './Style/App.css';
 import Header from './Header';
 import SpinnerCarga from './SpinnerCarga';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -53,8 +53,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {(isLoading) && <SpinnerCarga />} {/* Carga SpinnerCarga mientras is loading sea true */}
-      {(!isLoading) && <SearchPage theproducts={productos} />}
+      {(!isLoading) && <SpinnerCarga />} {/* Carga SpinnerCarga mientras is loading sea true */}
+      {(isLoading) && <SearchPage theproducts={productos} />}
       {!aux && <Error error={productos}/>}
     </div>
   );
