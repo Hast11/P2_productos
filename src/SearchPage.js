@@ -74,4 +74,4 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
 
         </div>
     )
-    }
+}
