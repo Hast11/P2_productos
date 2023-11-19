@@ -24,7 +24,7 @@ function App() {
       try{
         let queryparams ="";
         queryparams = "";
-        const response = await fetch(`${CONFIG.server_url}${queryparams}`);
+        const response = await fetch(`${url}${queryparams}`);
         if (response.status===200){
           aux = true;
           const data = await response.json(); 
@@ -54,7 +54,7 @@ function App() {
     <div className="App">
       <Header />
       {(!isLoading) && <SpinnerCarga />} {/* Carga SpinnerCarga mientras is loading sea true */}
-      {(isLoading) && <SearchPage theproducts={productos} />}
+      {(isLoading) && <SearchPage theproducts={productos} />} {/* La prop theproducts es del enunciado*/}
       {!aux && <Error error={productos}/>}
     </div>
   );

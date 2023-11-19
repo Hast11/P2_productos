@@ -21,11 +21,15 @@
     margin-left: 20px;
 }
 
-#Centremonos{
+#Formulario{
     display: flex;
     justify-content: center;
 }
 
 button{
     margin-bottom: 10px;
+}
+
+#selector{
+    margin: 10px;
 }
