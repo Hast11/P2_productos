@@ -15,7 +15,7 @@ function App() {
 
   const [isLoading, setLoading] = useState(true)
   const [productos, setProductos] = useState(null)
-  const url = CONFIG.server_url;
+  const url = CONFIG.server_url; /* "https://dummyjson.com/products" */
   var aux = true;
   const USE_SERVER = CONFIG.use_server;
 
@@ -23,7 +23,6 @@ function App() {
     if(USE_SERVER){
       try{
         let queryparams ="";
-        queryparams = "";
         const response = await fetch(`${url}${queryparams}`);
         if (response.status===200){
           aux = true;
@@ -54,7 +53,7 @@ function App() {
     <div className="App">
       <Header />
       {(!isLoading) && <SpinnerCarga />} {/* Carga SpinnerCarga mientras is loading sea true */}
-      {(isLoading) && <SearchPage theproducts={productos} />} {/* La prop theproducts es del enunciado*/}
+      {(isLoading && aux) && <SearchPage theproducts={productos} />} {/* La prop theproducts es del enunciado*/}
       {!aux && <Error error={productos}/>}
     </div>
   );
