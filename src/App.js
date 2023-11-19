@@ -8,6 +8,7 @@ import SearchPage from './SearchPage';
 import CONFIG from './config/config';
 import Error from './Error';
 import { mockdata } from './constants/products';
+import { Routes, Route} from "react-router-dom";
 
 
 
