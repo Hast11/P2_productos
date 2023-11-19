@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import CardGroup from 'react-bootstrap/CardGroup';
+import { Link } from 'react-router-dom';
 
 export default function SearchPage (props){ /* Recibe como props theproducts y */ 
     
@@ -17,7 +18,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
         if (busqueda===null){ /* Si no tenemos valer que buscar, sacamos todos */
             setResultados(props.theproducts)
         }else{ /** Si tenemos algo en busqueda, el nuevo array sera compuesto por aquellos titulos que tienen el valor buscado */
-            setResultados(props.theproducts.filter(word => word.title.toLowerCase().includes(filtro.toLowerCase())));
+            setResultados(props.theproducts.filter(word => word.title.toLowerCase().includes(busqueda.toLowerCase())));
         }
     }
 
