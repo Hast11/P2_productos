@@ -28,9 +28,9 @@ return(
                     </div>
                 </div>
 
-                <Form.Select aria-label="Default select example" id="filter">
+                <Form.Select aria-label="Default select example" id="selector">
                     <option>Open this select menu</option>
-                    <option value="1">One</option>
+                    <option value="All">All</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </Form.Select>
