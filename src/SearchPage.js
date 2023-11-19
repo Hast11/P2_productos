@@ -23,8 +23,18 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
                 </div>
             </div>
 
-            <div>
-
+            <div id="“productosresultados”">
+                {props.theproducts.map((product,index) => {
+                    <Card style={{ width: '18rem' }} className="unproducto" key={index}>
+                    <Card.Img variant="top" src={product.images[0]} />
+                    <Card.Body>
+                        <Card.Title>{product.title}</Card.Title>
+                        <Card.Text>{product.description}</Card.Text>
+                        <Button variant="primary">VER</Button>
+                    </Card.Body>
+                    </Card>
+                }
+                )}
             </div>
 
 
