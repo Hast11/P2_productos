@@ -35,6 +35,18 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    async function fetchData() {
+      await callServer();
+        
+      setTimeout(()=>{
+        setLoading(false);
+      },500);		
+    }
+
+    fetchData();
+  }, []);
+
 
   return (
     <div className="App">
