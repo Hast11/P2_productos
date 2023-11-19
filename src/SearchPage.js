@@ -3,6 +3,7 @@ import './Style/SearchPage.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState } from "react";
+import Form from 'react-bootstrap/Form';
 
 export default function SearchPage (props){ /* Recibe como props theproducts y */ 
     
@@ -10,9 +11,8 @@ const [busqueda, setBusqueda] = useState(null);
 const datos = props.theproducts;
 const [resultados, setResultados] = useState(props.theproducts);
 
-function filtrarBusqueda(query) {
-    setResultados(datos.filter((el) => el.title.toLowerCase().includes(query.toLowerCase()) /* | el.description.toLowerCase().includes(query.toLowerCase()) */)) ;
-  }
+/*function filtrarBusqueda(query) {
+    setResultados(datos.filter((el) => el.title.toLowerCase().includes(query.toLowerCase()) /* | el.description.toLowerCase().includes(query.toLowerCase()) ))   }*/
 
 return(
         <div id="searchPage">
@@ -23,14 +23,17 @@ return(
                     <div id="buscador"><b>Buscar</b>
                         <input id="inputBusqueda" placeholder="Escriba lo que quiera buscar..." value={busqueda} onChange={(e)=>setBusqueda(e.target.value)}></input>
                         <div>
-                            <button id="buscador" onClick={filtrarBusqueda(busqueda)}>Buscar</button>
+                            <button id="buscador" /* onClick={filtrarBusqueda(busqueda)} */>Buscar</button>
                         </div>
                     </div>
                 </div>
 
-                <div id="filter"><b>Filtrar</b>
-                    <div><select id="selector"></select></div>
-                </div>
+                <Form.Select aria-label="Default select example" id="filter">
+                    <option>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </Form.Select>
             </div>
 
             {/* <div id="“productosresultados”"> pendiente cambiar a que sacamos por pantalla resultados
