@@ -20,33 +20,19 @@ function App() {
   var aux = true;
   const USE_SERVER = CONFIG.use_server;
 
-  const callServer = async (param) => {
+  const callServer = async ()=>{
     if(USE_SERVER){
+      let data;
       try{
-        let queryparams ="";
-        const response = await fetch(`${url}${queryparams}`);
-        if (response.status===200){
-          aux = true;
-          const data = await response.json(); 
-          setProductos(data);
-        }
-        else{
-          const data = await response.json(); 
-          setProductos(data);
-          aux = false;
-          <Error/>
-        }
+        const resp = await fetch(url);
+        data = await resp.json();
+      }catch(e){
+        alert("No se han podido recuperar los productos");
       }
-      catch(error){
-        <div>
-          Error {setProductos({error: {description: error.message}})}
-        </div>
-      }
-    }
-    else{
+      setProductos(data);
+    }else{
       setProductos(mockdata);
     }
-    setLoading(false);
   }
 
 
