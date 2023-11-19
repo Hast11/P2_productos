@@ -1,14 +1,31 @@
 #buscadorFiltro{
     display: flex;
-    justify-content: center;
     flex-direction: row;
     border-color: blue;
     border-width: 1px;
     border-style: solid;
     width: 300px;
+    margin-left: 20px;
 }
 
-#filtro{
+#input{
     width: 250px;
     margin: 10px;
+}
+
+#filter{
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    width: 300px;
+    margin-left: 20px;
+}
+
+#Centremonos{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin-bottom: 10px;
 }
