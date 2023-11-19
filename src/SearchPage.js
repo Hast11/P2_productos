@@ -33,7 +33,7 @@ return(
                 </div>
             </div>
 
-            {/* <div id="“productosresultados”">
+            {/* <div id="“productosresultados”"> pendiente cambiar a que sacamos por pantalla resultados
                 {props.theproducts.map((product,index) => {
                     <Card style={{ width: '18rem' }} className="unproducto" key={index}>
                     <Card.Img variant="top" src={product.images[0]} />
