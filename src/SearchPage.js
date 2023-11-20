@@ -35,12 +35,12 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
 
     return(
         <div id="searchPage">
-            <h2 id="catalogo">Catálogo</h2>
+            <h2 id="catálogo">catálogo</h2>
 
             <div id="Formulario">
                 <div id="buscadorFiltro">
                     <div id="buscador"><b>Buscar</b>
-                        <input id="inputBusqueda" placeholder="Escriba lo que quiera buscar..." onChange={(e)=>setBusqueda(e.target.value)}></input>
+                        <input id="filtro" placeholder="Escriba lo que quiera buscar..." onChange={(e)=>setBusqueda(e.target.value)}></input>
                         <div>
                             <button id="buscador" onClick={filtrarBusqueda()}>Buscar</button>
                         </div>
