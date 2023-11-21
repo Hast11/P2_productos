@@ -24,7 +24,7 @@ function App() {
   const USE_SERVER = CONFIG.use_server;
 
   const callServer = async ()=>{
-    if(USE_SERVER){
+    if(USE_SERVER===true){
       let data;
       try{
         const resp = await fetch(url);
