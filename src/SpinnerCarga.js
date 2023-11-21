@@ -5,8 +5,8 @@ const spinnerWrapperEl = document.querySelector('.Spinner');
 
 function SpinnerCarga() {
   return (
-    <div className='Spinner'>
-      <Spinner animation="border" variant="primary" role="status" id="loading" className='Spinner'>
+    <div className='Spin'>
+      <Spinner  id="loading" className="spinner" as="span" animation="border" size="big" variant="light" role="status">
         <span className="visually-hidden">Loading...</span>
       </Spinner>
     </div>
