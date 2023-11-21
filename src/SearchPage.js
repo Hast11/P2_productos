@@ -40,7 +40,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
             <div id="Formulario">
                 <div id="buscadorFiltro">
                     <div id="buscadorr"><b>Buscar</b>
-                        <input id="filtro" placeholder="Escriba lo que quiera buscar..." onChange={(e)=>setBusqueda(e.target.value)}></input>
+                        <input id="filtro" placeholder="Escriba lo que quiera buscar..." onChange={e=>setBusqueda(e.target.value)}></input>
                         <div>
                             <button id="buscador" onClick={()=>filtrarBusqueda()}>Buscar</button>
                         </div>
@@ -48,7 +48,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
                 </div>
 
                 <div className="SlectorFiltro"><b>Seleccionar</b>
-                    <select id="selector" defaultValue="All" onChange={()=>selector()}>
+                    <select id="selector" defaultValue="All" onChange={selector}>
                         <option value="All" > All </option>
                         {categorias.sort().map((item, index) => /* Necesito de una vez aprender a usar map */
                         <option key={index} value={item}> {item} </option>
@@ -56,6 +56,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
                     </select>
                 </div>
             </div>
+            <div id="productosresultados">
             <ul>
                 <CardGroup>{resultados.map((item, index) =>
                     <li key={index} className="unproducto">
@@ -70,6 +71,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
                     </li>)}
                 </CardGroup>
             </ul>
+            </div>
 
 
         </div>
