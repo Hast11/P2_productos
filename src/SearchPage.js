@@ -24,7 +24,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
 
     function selector(){
         var select = document.getElementById('selector'); /** Guardamos el selector en una variable para no escribir tanto */
-        var value = select.options[select.selevtedIndex].value; /**Guardamos el valor del selector en una variable */
+        var value = select.options[select.selectedIndex].value; /**Guardamos el valor del selector en una variable */
         if(value !== "All"){ /**Si el selector es algo distinto de all, guardamos en resultados los productos filtrados por la categoria */
             setResultados(props.theproducts.filter(word=>(word.category===(value))));
         }
@@ -39,10 +39,10 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
 
             <div id="Formulario">
                 <div id="buscadorFiltro">
-                    <div id="buscador"><b>Buscar</b>
+                    <div id="buscadorr"><b>Buscar</b>
                         <input id="filtro" placeholder="Escriba lo que quiera buscar..." onChange={(e)=>setBusqueda(e.target.value)}></input>
                         <div>
-                            <button id="buscador" onClick={filtrarBusqueda()}>Buscar</button>
+                            <button id="buscador" onClick={()=>filtrarBusqueda()}>Buscar</button>
                         </div>
                     </div>
                 </div>
