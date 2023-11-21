@@ -47,7 +47,7 @@ export default function SearchPage (props){ /* Recibe como props theproducts y *
                     </div>
                 </div>
 
-                <div className="SlectorFiltro"><b>Seleccionar</b>
+                <div className="SelectorFiltro"><b>Seleccionar</b><div/>
                     <select id="selector" defaultValue="All" onChange={selector}>
                         <option value="All" > All </option>
                         {categorias.sort().map((item, index) => /* Necesito de una vez aprender a usar map */
