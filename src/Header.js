@@ -1,10 +1,11 @@
-import './Style/Header.css'
-export default function Header (props){
-    return( //Todos los components tienen que tener un return que devuelva un elemento unico
+import './Style/Header.css'; // Importa los estilos CSS para el componente Header
+
+export default function Header(props) {
+    return ( // Retorna un elemento único
         <div id="cabecera">
-            <link href="Header.css" rel="stylesheet"></link>
-            <h3 className='mensaje'>Pagina de Andres Gil Oliva</h3> {/* CSS para centrarlo */}
-            <center><img className="logo" src="29264.png" width={50} alt="Logo"></img></center>
+            <link href="Header.css" rel="stylesheet"></link> {/* No es necesario, ya se importaron los estilos arriba */}
+            <h3 className='mensaje'>Pagina de Andres Gil Oliva</h3> {/* Utiliza CSS para centrar el texto */}
+            <center><img className="logo" src="29264.png" width={50} alt="Logo"></img></center> {/* Centro de imagen */}
         </div>
     )
 }

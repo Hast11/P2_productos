@@ -6,5 +6,5 @@ export default function NotFound(props){
         <Link to='/'> <button id="volver"> Inicio </button> </Link>
     </div>
 
-    )
+    );
 }

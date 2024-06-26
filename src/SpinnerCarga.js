@@ -1,13 +1,14 @@
-import Spinner from 'react-bootstrap/Spinner';
-import './Style/SpinnerCarga.css'
+import Spinner from 'react-bootstrap/Spinner'; // Importa el componente Spinner de React Bootstrap
+import './Style/SpinnerCarga.css'; // Importa los estilos CSS específicos para SpinnerCarga
 
+// No se utiliza: 
 const spinnerWrapperEl = document.querySelector('.Spinner');
 
 function SpinnerCarga() {
   return (
-    <div className='Spin'>
-      <Spinner  id="loading" className="spinner" as="span" animation="border" size="big" variant="light" role="status">
-        <span className="visually-hidden">Loading...</span>
+    <div className='Spin'> {/* Contenedor principal del spinner */}
+      <Spinner id="loading" className="spinner" as="span" animation="border" size="big" variant="light" role="status">
+        <span className="visually-hidden">Loading...</span> {/* Texto accesible para lectores de pantalla */}
       </Spinner>
     </div>
   );
