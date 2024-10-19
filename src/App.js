@@ -1,4 +1,3 @@
-import logo from './logo.svg'; // Importa el logo de la aplicación
 import './Style/App.css'; // Importa los estilos CSS de la aplicación
 import Header from './Header'; // Importa el componente Header
 import SpinnerCarga from './SpinnerCarga'; // Importa el componente SpinnerCarga
@@ -6,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos CSS de Boo
 import React, { useState, useEffect } from 'react'; // Importa React y sus hooks (useState, useEffect)
 import SearchPage from './SearchPage'; // Importa el componente SearchPage
 import CONFIG from './config/config'; // Importa la configuración de la aplicación desde config/config.js
-import Error from './Error'; // Importa el componente Error (no utilizado en este código)
 import { mockdata } from './constants/products'; // Importa datos mock de productos desde constants/products.js
 import { Routes, Route } from "react-router-dom"; // Importa componentes necesarios de react-router-dom
 import NotFound from './NotFound'; // Importa el componente NotFound

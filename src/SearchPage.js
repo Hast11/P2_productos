@@ -2,7 +2,6 @@ import './Style/SearchPage.css'; // Importa los estilos CSS específicos para Se
 import Button from 'react-bootstrap/Button'; // Importa el componente Button de React Bootstrap
 import Card from 'react-bootstrap/Card'; // Importa el componente Card de React Bootstrap
 import { useState } from "react"; // Importa el hook useState de React
-import Form from 'react-bootstrap/Form'; // Importa el componente Form de React Bootstrap
 import CardGroup from 'react-bootstrap/CardGroup'; // Importa el componente CardGroup de React Bootstrap
 import { Link } from 'react-router-dom'; // Importa el componente Link de react-router-dom
 
